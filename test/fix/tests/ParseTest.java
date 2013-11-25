@@ -13,6 +13,8 @@ import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
 
+import fix.bo.FixBase;
+import fix.bo.compblock.Party;
 import fix.util.ParseFixMessage;
 
 /**
@@ -53,7 +55,7 @@ public class ParseTest {
 	public void test() {
 		String msg;
 		ParseFixMessage pfm = new ParseFixMessage();
-		Hashtable<Integer, String> fields;
+		FixBase fields;
 
 		try {
 			
@@ -97,4 +99,10 @@ public class ParseTest {
 		}
 	}
 
+	@Test
+	public void CompBlockTest() {
+		String partyMsg="448=KV447=REGISTRY452=CUSTOMER802=2523=1002803=BROKER523=1003803=CUSTODIAN";
+		Party party = new Party(partyMsg);
+		System.out.println("CompBlockTest - " + party);		
+	}
 }
