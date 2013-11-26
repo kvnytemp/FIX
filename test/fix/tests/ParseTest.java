@@ -19,7 +19,7 @@ import fix.util.ParseFixMessage;
 
 /**
  * @author Kishore
- *
+ * Updated thro' eclipse
  */
 public class ParseTest {
 
